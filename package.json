@@ -1,6 +1,6 @@
 {
   "name": "gfm-table",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "generate GFM style table",
   "main": "index.js",
   "scripts": {
