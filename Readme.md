@@ -14,25 +14,48 @@ $ npm install gfm-table
 var table = require('gfm-table')
 
 var out = table([
-  ['name', 'color', 'count'],        // automatically recognized as heading
+  ['name', 'color', 'count'],
   ['Manx Loaghtan', 'brown', 1200],
   ['Merino', 'white', 534],
   ['Suffolk', 'black', 200]
-], ['l', 'c', 'r']);                 // alignments (l: left, c: center, r: right) are optional
+]);
 
 console.log(out);
-
-/*
-Output is
-
+```
+Output
+```
 | name          | color | count |
-|:------------- |:-----:| -----:|
+| ------------- | ----- | ----- |
 | Manx Loaghtan | brown | 1200  |
 | Merino        | white | 534   |
 | Suffolk       | black | 200   |
+```
 
-*/
+With alignment options
 
+* `l` - left
+* `c` - center
+* `r` - right
+
+```javascript
+var table = require('gfm-table')
+
+var out = table([
+  ['name', 'color', 'count'],
+  ['Manx Loaghtan', 'brown', 1200],
+  ['Merino', 'white', 534],
+  ['Suffolk', 'black', 200]
+], ['c', 'l', 'r']);
+
+console.log(out);
+```
+Output
+```
+|     name      | color | count |
+|:-------------:|:----- | -----:|
+| Manx Loaghtan | brown |  1200 |
+|    Merino     | white |   534 |
+|    Suffolk    | black |   200 |
 ```
 
 ## License
