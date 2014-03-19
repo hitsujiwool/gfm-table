@@ -10,7 +10,7 @@ $ npm install gfm-table
 
 ## Usage
 
-```javasciprt
+```javascript
 var table = require('gfm-table')
 
 var out = table([
