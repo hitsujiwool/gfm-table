@@ -41,14 +41,13 @@ describe('table()', function() {
       ['Manx Loaghtan', 'brown', 1200],
       ['Merino', 'white', 534],
       ['Suffolk', 'black', 200]
-    ], ['l', 'c', 'r']);
-    var expect = "| name          | color | count |\n"
-               + "|:------------- |:-----:| -----:|\n"
-               + "| Manx Loaghtan | brown | 1200  |\n"
-               + "| Merino        | white | 534   |\n"
-               + "| Suffolk       | black | 200   |";
+    ], ['c', 'l', 'r']);
+    var expect = "|     name      | color | count |\n"
+               + "|:-------------:|:----- | -----:|\n"
+               + "| Manx Loaghtan | brown |  1200 |\n"
+               + "|    Merino     | white |   534 |\n"
+               + "|    Suffolk    | black |   200 |";
 
     assert.equal(out, expect);
   });
-
 });
